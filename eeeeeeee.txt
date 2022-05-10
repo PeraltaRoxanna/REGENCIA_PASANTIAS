@@ -1,1 +1,56 @@
-eeeeeeeeee
+mysql> create database regencia;
+mysql> use regencia ;
+mysql> CREATE TABLE armario1_TT(
+    -> ID int (16) NOT NULL AUTO_INCREMENT,
+    -> estante_1 varchar (30),
+    -> estante_2 varchar (30),
+    -> estante_3 varchar (30),
+    -> PRIMARY KEY (id)
+    -> );
+mysql> create table armario2_TM (
+    -> ID int (16) NOT NULL AUTO_INCREMENT,
+    -> estante_1 varchar (30),
+    -> estante_2 varchar (30),
+    -> estante_3 varchar (30),
+    -> estante_4 varchar (30),
+    -> estante_5 varchar (30),
+    -> estante_6 varchar (30),
+    -> estante_7 varchar (30),
+    -> PRIMARY KEY (id)
+    -> );
+mysql> create table armario3_TN (
+    -> ID int(16) NOT NULL AUTO_INCREMENT,
+    -> estante_1 varchar (30),
+    -> PRIMARY KEY (id)
+    -> );
+mysql> ALTER TABLE armario1_TT ADD estante_4 VARCHAR (30);
+mysql> ALTER TABLE armario1_TT ADD estante_5 VARCHAR (30);
+
+mysql> create table armario4_LADO_DERECHO(
+    -> ID int (16) NOT NULL AUTO_INCREMENT,
+    -> estante_1 VARCHAR (30),
+    -> estante_2 VARCHAR (30),
+    -> estante_3 VARCHAR (30),
+    -> estante_4 VARCHAR (30),
+    -> PRIMARY KEY (id)
+    -> );
+
+mysql> CREATE TABLE armario4_LADO_IZQUIERDO(
+    -> ID int (16) NOT NULL AUTO_INCREMENT,
+    -> estante_1 VARCHAR (30),
+    -> estante_2 VARCHAR (30),
+    -> estante_3 VARCHAR (30),
+    -> estante_4 VARCHAR (30),
+    -> PRIMARY KEY (id)
+    -> );
+mysql> ALTER TABLE armario4_LADO_DERECHO ADD estante_5 VARCHAR (30);
+mysql> show tables;
++-------------------------+
+| Tables_in_regencia      |
++-------------------------+
+| armario1_tt             |
+| armario2_tm             |
+| armario3_tn             |
+| armario4_lado_derecho   |
+| armario4_lado_izquierdo |
++-------------------------+
