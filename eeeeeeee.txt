@@ -54,3 +54,7 @@ mysql> show tables;
 | armario4_lado_derecho   |
 | armario4_lado_izquierdo |
 +-------------------------+
+11:07 24/05/202211:07 24/05/2022
+mysql> insert into armario2_tm_med(
+    -> estante_1,estante_2,estante_3, estante_4,estante_5,estante_6,estante_7)
+    -> values ("materiales pintura","repuestos notas","TM partes","folios varios","folios presentismo","planillas en blanco","caja bandera");
