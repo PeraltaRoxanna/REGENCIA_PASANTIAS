@@ -35,3 +35,6 @@ h1 {
 .box > * {
 	flex: 1 200px;
 }
+select {
+	width: 200px;
+}
