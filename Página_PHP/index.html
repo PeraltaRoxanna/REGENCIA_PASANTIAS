@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Registro</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro</title>
+  <link rel="stylesheet" href="estilos/estilo.css">
 </head>
+
 <body>
-	<h1>Registro de base de datos</h1>
-	<h2 class="subtitle">Buscar in item</h2>
-	<label for="buscador">Item</label>
-	<input type="text" name="" id="buscador">
-	<input type="text" name="resultado">
-	<br><br>
-	<h2>Modificaciones:</h2>
-	<hr>
-	<h2>Meter algo nuevo/devolver</h2>
-	<span class="meter-conteiner">
-		<div>
-			<label for="itemPut">Item</label>
-			<input type="text" placeholder="Item nevo/devuelto" id="itemPut">
-		</div>
-		<div>
-			<label for="estantePut">Estante</label>
-			<input type="text" placeholder="Estante" id="estantePut">
-		</div>
-		<div>
-			<label for="armarioPut">Armario</label>
-			<input placeholder="Armario" id="armarioPut" type="text">
-		</div>
-	</span>
-		<span class="sacar-conteiner">
-		<div>
-			<label for="itemOut">Item</label>
-			<input type="text" placeholder="Item nevo/devuelto" id="itemOut">
-		</div>
-		<div>
-			<label for="estanteOut">Estante</label>
-			<input type="text" placeholder="Estante" id="estanteOut">
-		</div>
-		<div>
-			<label for="armarioOut">Armario</label>
-			<input placeholder="Armario" id="armarioOut" type="text">
-		</div>
-	</span>
+  <h1>Registro de base de datos</h1>
+  <h2 class="subtitle">Buscar un item</h2>
+  <!-- <label for="buscador">Item</label> -->
+  <input type="text" name="" id="buscador" placeholder="Item">
+  <!-- si no me equivoco voy a tener que hace un contenedor con 3 inputs para cada dato -->
+  <input type="text" name="resultado" id="resultado" placeholder="Resultado">
+  <br><br>
+  <hr>
+  <h2 class="subtitle">Modificaciones</h2><br>
+  <h2>Meter algo nuevo/devolver</h2>
+  <span class="box meter-conteiner">
+    <div>
+      <label for="itemPut">Item</label>
+      <input type="text" placeholder="Que pones" id="itemPut">
+    </div>
+    <div>
+      <label for="armarioPut">Armario</label>
+      <input placeholder="En qué armario" id="armarioPut" type="text">
+    </div>
+    <div>
+      <label for="estantePut">Estante</label>
+      <input type="text" placeholder="En qué estante" id="estantePut">
+    </div>
+  </span>
+  <h2>Sacar algo</h2>
+  <span class="box sacar-conteiner">
+    <div>
+      <label for="itemOut">Item</label>
+      <input type="text" placeholder="Qué sacas" id="itemOut">
+    </div>
+    <div>
+      <label for="armarioOut">Armario</label>
+      <input placeholder="En qué armario" id="armarioOut" type="text">
+    </div>
+    <div>
+      <label for="estanteOut">Estante</label>
+      <input type="text" placeholder="En qué estante" id="estanteOut">
+    </div>
+
+  </span>
 
 
 </body>
+
 </html>
