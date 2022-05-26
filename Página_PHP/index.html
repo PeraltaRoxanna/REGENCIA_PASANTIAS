@@ -9,17 +9,21 @@
 </head>
 
 <body>
-  <h1>Registro de base de datos</h1>
-  <h2 class="subtitle">Buscar un item</h2>
+  <div class="title">
+    Registro de base de datos
+  </div>
+  <h2 class="subtitle leftDistance">Buscar un item</h2>
   <!-- <label for="buscador">Item</label> -->
   <input type="text" name="" id="buscador" placeholder="Item">
-  <!-- si no me equivoco voy a tener que hace un contenedor con 3 inputs para cada dato -->
-  <input type="text" name="resultado" id="resultado" placeholder="Resultado">
-  <br><br>
-  <hr>
-  <h2 class="subtitle">Modificaciones</h2><br>
-  <h2>Meter algo nuevo/devolver</h2>
-  <span class="box meter-conteiner">
+  <!-- si no me equivoco voy a tener que hace un contenedor con 3 inputs para cada dato en vez del input text -->
+  <span class="resultado">
+    <input type="text" name="resultado" id="resultado" placeholder="Resultado">
+    <input type="submit" value="Sacar">
+  </span>
+  <br><br><br><br>
+  <h2 style="text-align: center; font-size: 2.5rem;" class="subtitle">Modificaciones</h2><br>
+  <h2 class="leftDistance">Meter algo nuevo/devolver</h2>
+  <span class="box meter-conteiner leftDistance">
     <div>
       <label for="itemPut">Item</label>
       <input type="text" placeholder="Que pones" id="itemPut">
@@ -46,16 +50,19 @@
         <option value="">7</option>
       </select>
     </div>
+    <div>
+      <input type="submit" value="Poner">
+    </div>
   </span>
-  <h2>Sacar algo</h2>
-  <span class="box sacar-conteiner">
+  <h2 class="leftDistance">Sacar algo</h2>
+  <span class="box sacar-conteiner leftDistance">
     <div>
       <label for="itemOut">Item</label>
       <input type="text" placeholder="Qué sacas" id="itemOut">
     </div>
     <div>
       <!-- <label for="armarioOut">Armario</label> -->
-      <select id="armarioOut">
+      <select id="armarioOut" tabindex="2">
         <option value="" selected disabled>Armario</option>
         <option value="">Armario_1_TT_izq</option>
         <option value="">Armario_2_TM_med</option>
@@ -75,6 +82,9 @@
         <option value="">6</option>
         <option value="">7</option>
       </select>
+    </div>
+    <div>
+      <input type="submit" value="Sacar">
     </div>
   </span>
 
