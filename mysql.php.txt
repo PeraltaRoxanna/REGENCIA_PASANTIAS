@@ -1,0 +1,7 @@
+create database regencia;
+use regencia;
+create table armarios (ID_armarios int (16) NOT NULL AUTO_INCREMENT,
+armario1 varchar(20), armario2 varchar (20), armario3 varchar (20), armario4 varchar (20), armario5 varchar (20),
+PRIMARY KEY (id_armarios)
+);
+ALTER
