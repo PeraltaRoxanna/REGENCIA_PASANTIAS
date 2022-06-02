@@ -16,3 +16,33 @@ h1 {
 	font-size: 2.5rem;
 	border-bottom: thick solid black;
 }
+h2 {
+	text-align: center;
+	font-size: 2rem;
+}
+h3 {
+	margin-left: 1.5rem;
+}
+.form-conteiner {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 90%;
+	margin: 2rem auto;
+	border: medium solid black;
+	height: 15vh;
+	justify-content: space-around;
+	align-items: center;
+	background-color: rgb(156, 170, 175);
+}
+.txt {
+	width: 50%;
+}
+input,
+select {
+	cursor: pointer;
+}
+input[type="text"] {
+	width: 100%;
+	padding: 7rem auto;
+	cursor: text;
+}
