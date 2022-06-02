@@ -46,18 +46,26 @@ body {
 	font-size: 2rem;
 }
 .box {
+	flex-flow: row nowrap;
 	display: flex;
-	text-align: center;
+	/* text-align: center; */
+
 	width: calc(95% - 50px);
 	margin: 0 auto;
 	border: thin solid black;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	/* padding-top: 50px;
+	padding-bottom: 50px; */
+	padding: 40px;
 	background-color: #ffffff;
+	justify-content: space-around;
 }
 .box > * {
 	/* columns: 200px 4; */
-	flex: 1 200px;
+	/* flex: 1 200px; */
+	flex-grow: 1;
+}
+.box > *:nth-child(4) {
+	flex-grow: 0.25;
 }
 select {
 	width: 200px;
