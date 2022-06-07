@@ -10,28 +10,18 @@ body {
 	background-size: 100vw 100vh;
 	background-repeat: no-repeat;
 }
-h1 {
-	margin: 0;
-	padding-top: 26.8px; /* el margin */
-	background-color: white;
-	text-align: right;
-	/* text-decoration: underline; */
-	font-size: 2.5rem;
-	border-bottom: thick solid black;
-	box-shadow: -0.5rem -0.5rem 3rem 0 gray inset;
-}
 h2 {
 	margin-top: 30px;
 	text-align: center;
 	font-size: 2rem;
 }
 h3 {
-	margin-left: 1.5rem;
+	margin-left: auto;
 }
 .form-conteiner {
 	display: flex;
 	flex-flow: row nowrap;
-	width: 90%;
+	width: 100%;
 	margin: 2rem auto;
 	border: medium solid black;
 	height: 15vh;
@@ -75,4 +65,26 @@ input[type="text"] {
 .input-group {
 	width: 50%;
 	padding-top: 15px;
+}
+.myBody {
+	margin: 30px auto 0;
+	width: 90%;
+}
+.nav-conteiner {
+	display: flex;
+	flex-flow: row nowrap;
+	height: 8.6vh;
+	justify-content: space-between;
+	border-bottom: thick solid black;
+	background-color: white;
+	box-shadow: -0.5rem -0.5rem 3rem 0 gray inset;
+	align-items: flex-start;
+	width: 100%;
+}
+.nav-conteiner > * {
+	align-self: flex-end;
+}
+.nav-title > * {
+	margin: 0;
+	font-size: 2.5rem;
 }
