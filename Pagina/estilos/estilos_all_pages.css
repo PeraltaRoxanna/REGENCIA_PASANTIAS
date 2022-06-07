@@ -1,0 +1,25 @@
+main {
+	width: 80%;
+	margin: 10vh auto 0;
+	border: medium solid black;
+	background-color: rgb(156, 170, 175);
+	height: 70vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	/* quien? , buscar , que cosa/resultado , razon , hora devolucion , comentario */
+	grid-template-rows: repeat(6, 1fr);
+	/* grid-area: "search" "resultado" "quien" "devolucion" "razon" "comentario"; */
+	padding: 3rem;
+}
+input {
+	width: 90%;
+}
+.btn-outline-secondary {
+	background-color: #e9ecef;
+}
+.input-conteiner {
+	text-align: end;
+}
+.input-conteiner > * {
+	width: auto;
+}
