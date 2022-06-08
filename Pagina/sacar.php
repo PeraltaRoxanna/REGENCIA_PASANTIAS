@@ -20,7 +20,10 @@
           <a class="nav-link" href="index.php">Buscar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="modificaciones.php">Agregar/Devolver</a>
+          <a class="nav-link" href="agregar.php">Agregar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="devolver.php">Devolver</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="sacar.php">Sacar</a>

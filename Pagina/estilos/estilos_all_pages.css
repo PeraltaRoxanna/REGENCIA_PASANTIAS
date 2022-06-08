@@ -22,4 +22,18 @@ input {
 }
 .input-conteiner > * {
 	width: auto;
+	margin-top: 2rem;
+}
+textarea {
+	resize: none;
+}
+#btn1:checked + label[for="btn1"] {
+	background-color: rgb(108, 117, 125);
+	border-bottom-color: rgb(108, 117, 125);
+	color: white;
+}
+#btn2:checked + label[for="btn2"] {
+	background-color: rgb(108, 117, 125);
+	border-bottom-color: rgb(108, 117, 125);
+	color: white;
 }

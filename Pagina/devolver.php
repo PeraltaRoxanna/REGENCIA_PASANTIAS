@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mover</title>
+  <title>Modificaciones</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="estilos/estilos2.css">
@@ -23,13 +23,13 @@
           <a class="nav-link" href="agregar.php">Agregar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="devolver.php">Devolver</a>
+          <a class="nav-link active" href="devolver.php">Devolver</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="sacar.php">Sacar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="mover.php">Mover</a>
+          <a class="nav-link" href="mover.php">Mover</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="registro.php">Registro</a>
@@ -39,11 +39,16 @@
     <article class="nav-title">
       <h1>Base de datos</h1>
     </article>
-    </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"></script>
+  </section>
+  <section class="main-conteiner">
+    <main>
+      <h2 style="margin-top: 0;">Devolver Algo</h2>
+      
+    </main>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
