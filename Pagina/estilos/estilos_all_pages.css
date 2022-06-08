@@ -43,6 +43,7 @@ label[for="btn2"]:hover,
 label[for="btn1"]:hover {
 	border: 2px solid rgb(75, 78, 82);
 }
+<<<<<<< HEAD
 .input-group-text {
 	width: 90px;
 	display: flex;
@@ -52,3 +53,5 @@ label[for="btn1"]:hover {
 label[for="btn1"] {
 	border-radius: 10px;
 } */
+=======
+>>>>>>> 4de9f3ea53e8bce57a8506deb2e353f8a339ea71
