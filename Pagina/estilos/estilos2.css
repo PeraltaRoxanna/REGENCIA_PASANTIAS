@@ -5,7 +5,6 @@ body {
 	margin: 0;
 	font-size: 16px;
 	font-family: sans-serif;
-	/* background-color: #333; */
 	background-image: linear-gradient(#5dade2 50%, #074975);
 	background-size: 100vw 100vh;
 	background-repeat: no-repeat;
@@ -14,6 +13,9 @@ h2 {
 	margin-top: 30px;
 	text-align: center;
 	font-size: 2rem;
+}
+h1 {
+	margin: 0;
 }
 h3 {
 	margin-left: auto;
@@ -29,29 +31,14 @@ h3 {
 	align-items: center;
 	background-color: rgb(156, 170, 175);
 }
-.txt {
+/* .txt {
 	width: 50%;
-}
-input,
-select {
-	cursor: pointer;
 }
 input[type="text"] {
 	width: 100%;
 	padding: 7rem auto;
 	cursor: text;
-}
-/*.btn input {
-	border-radius: 0.5rem;
-	background-color: rgb(141, 139, 139);
-	padding: 0.1rem;
-}
-.btn input:hover {
-	background-color: rgb(199, 196, 196);
-	border: medium solid black;
-	padding: 0.1rem;
-}
-*/
+} */
 .form-select:hover {
 	/* box-shadow: 0.5rem 0.5rem 0.5rem; */
 	border: 2px solid #86b7fe;
@@ -63,7 +50,7 @@ input[type="text"] {
 	box-shadow: 0 0 0 0.25 #2471a3;
 }
 .input-group {
-	width: 50%;
+	/* width: 50%; */
 	padding-top: 15px;
 }
 .myBody {
@@ -71,20 +58,28 @@ input[type="text"] {
 	width: 90%;
 }
 .nav-conteiner {
-	display: flex;
-	flex-flow: row nowrap;
-	height: 8.6vh;
-	justify-content: space-between;
-	border-bottom: thick solid black;
+	padding-top: 20px;
 	background-color: white;
 	box-shadow: -0.5rem -0.5rem 3rem 0 gray inset;
-	align-items: flex-start;
-	width: 100%;
+	border-bottom: thick solid black;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
 }
-.nav-conteiner > * {
-	align-self: flex-end;
+.nav-btn {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
 }
-.nav-title > * {
-	margin: 0;
-	font-size: 2.5rem;
+.nav-title {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+.nav-link:focus {
+	background-color: rgb(13, 110, 253);
+	color: white;
+}
+.nav-link:focus a {
+	color: white;
 }
