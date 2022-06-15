@@ -1,9 +1,9 @@
 <?php
 
-$db = new mysqli("localhost","root","","regencia");
+$db = new mysqli("localhost","root","","test");
 
-if($db->connect_errno){
-  echo "Error de conexión";
+if($db->connect_error){
+  echo "Error de conexión". $db->connect_error;
 }
 
 else{

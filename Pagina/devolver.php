@@ -5,26 +5,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Base de datos</title>
+  <title>Modificaciones</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="estilos/estilos2.css">
   <link rel="stylesheet" href="estilos/estilos_all_pages.css">
+  <?php
+  include("conexion.php");
+  ?>
 </head>
 
 <body>
   <section class="nav-conteiner">
     <nav class="nav-btn">
-      <!-- <a href="modificiaciones.html"><input type="button" value="Modificaciones"></a>
-      <a><input type="button" value="Sacar Items"></a> -->
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a class="nav-link active" href="index.php">Buscar</a>
+          <a class="nav-link" href="index.php">Buscar</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="agregar.php">Agregar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="devolver.php">Devolver</a>
+          <a class="nav-link active" href="devolver.php">Devolver</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="sacar.php">Sacar</a>
@@ -43,10 +44,10 @@
   </section>
   <section class="main-conteiner">
     <main>
-  <h2>Buscar Item</h2>
-</main>
-</section>
-  <!-- JavaScript Bundle with Popper -->
+      <h2 style="margin-top: 0;">Devolver Algo</h2>
+     <form method="post" action=""></form>
+    </main>
+  </section>
   <script src="js/bootstrap.js"></script>
 </body>
 

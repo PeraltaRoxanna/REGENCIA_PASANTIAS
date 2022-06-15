@@ -22,4 +22,35 @@ input {
 }
 .input-conteiner > * {
 	width: auto;
+	margin-top: 2rem;
 }
+textarea,
+label[for="floatingTextarea2"] {
+	resize: none;
+	margin-top: 14px;
+}
+#btn1:checked + label[for="btn1"] {
+	background-color: rgb(108, 117, 125);
+	border-bottom-color: rgb(108, 117, 125);
+	color: white;
+	border: 2px solid rgb(75, 78, 82);
+}
+#btn2:checked + label[for="btn2"] {
+	background-color: rgb(108, 117, 125);
+	border-bottom-color: rgb(108, 117, 125);
+	color: white;
+	border: 2px solid rgb(75, 78, 82);
+}
+label[for="btn2"]:hover,
+label[for="btn1"]:hover {
+	border: 2px solid rgb(75, 78, 82);
+}
+.input-group-text {
+	width: 100px;
+	display: flex;
+	justify-content: center;
+}
+/* label[for="btn2"],
+label[for="btn1"] {
+	border-radius: 10px;
+} */
