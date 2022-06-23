@@ -1,9 +1,0 @@
-+-------------------------+
-| Tables_in_regencia      |
-+-------------------------+
-| armario1_tt_izq         |
-| armario2_tm_med         |
-| armario3_tn_der         |
-| armario4_lado_derecho   |
-| armario4_lado_izquierdo |
-+-------------------------+

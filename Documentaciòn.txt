@@ -1,0 +1,91 @@
+Documentaciòn Proyecto Consulta Items BD
+
+Definiciòn y concepto del proyecto:
+
+-El sistema que estamos desarrollando tiene como objetivo el poder organizar los elementos que están en regencia y en los distintos armarios en general, haciendo más fácil la 
+busqueda de los items y su estado. Esto tiene en cuenta los movimientos del item, el si el item está en regencia, o lo movieron, el dar de baja un item, el agregar un nuevo
+item, el saber en que armario está y en que estante.
+
+--------------------
+1. Estado base de datos:
+      -Creada base de datos regencia con las tablas:
+	  #armarios
+	  #estantes_por_armarios
+	  #items
+	  #items_por_estantes
+	  #movimientos
+
+2. Estado sitio web:
+      -Creado sitio web - Contenido:
+	  #6 Formularios HTML - PHP
+	  #1 Archivo PHP conexiòn
+	  #2 Archivos de estilo
+
+-------------------
+Contenido carpeta REGENCIA_PASANTIAS
+
+Carpeta "Pagina": Contiene el sitioweb, los archivos HTML, las carpetas CSS, y las carpetas JavaScript
+Archivo de texto "BaseDeDatosOficial": Contiene el query a realizar en mySql para crear la Base de datos con todas
+sus tablas
+Planilla de trabajo: Excel vacio para imprimir cuando se acaben las planillas
+Acceso rápido HTDOCS: Ponemos un acceso directo a HTDOCS para poder ingresar más rápido desde el área de trabajo local
+------------------
+Contenido Base de datos "Regencia"
+
+-Tabla armarios
+-Tabla estantes_por_armarios
+-items
+-items_por_estantes
+-movimientos
+
+Campos tabla armarios:
+		-ID_armarios
+		-armario1
+		-armario2
+		-armario3
+		-armario4
+		-armario5
+		-estado
+Campos tabla estantes_por_armarios:
+		-ID_EST_ARM
+		-ID_armarios
+		-estante1
+		-estante2
+		-estante3
+		-estante4
+		-estante5
+		-estante6
+		-estante7
+		-estado
+Campos tabla items:
+		-ID_item
+		-estado
+		-descripcion
+Campos items_por_estantes
+		-id_item_est
+		-id_item
+		-estado
+		-descripcion
+------------------
+Contenido sitio web
+  -Formulario "Busqueda"	---> index.php
+  -Formulario "Agregar"		---> agregar.php
+  -Formulario "Sacar"		---> sacar.php
+  -Formulario "Registro" 	---> registro.php
+  -Formulario "Movimiento"	---> mover.php
+  -Formulario "Devolver"	---> devolver.php
+-------------------
+Contenido formularios HTML
+
+-Formulario index.php - Busqueda
+
+Se encarga de realizar una consulta a la BD del item que escribamos en el buscador y muestra el item y donde se encuentra.
+El buscador hace una consulta a la base de datos Regencia usando el texto que ponemos en el input del buscador y nos dice en que estante de que armario se encuentra el item
+y el estado del mismo.
+
+
+-Formulario agregar.php - Agregar
+
+Se usa para agregar los nuevos items a la base de datos.
+
+

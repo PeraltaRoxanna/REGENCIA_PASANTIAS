@@ -24,8 +24,10 @@ input {
 	width: auto;
 	margin-top: 2rem;
 }
-textarea {
+textarea,
+label[for="floatingTextarea2"] {
 	resize: none;
+	margin-top: 14px;
 }
 #btn1:checked + label[for="btn1"] {
 	background-color: rgb(108, 117, 125);
@@ -43,9 +45,8 @@ label[for="btn2"]:hover,
 label[for="btn1"]:hover {
 	border: 2px solid rgb(75, 78, 82);
 }
-<<<<<<< HEAD
 .input-group-text {
-	width: 90px;
+	width: 100px;
 	display: flex;
 	justify-content: center;
 }
@@ -53,5 +54,3 @@ label[for="btn1"]:hover {
 label[for="btn1"] {
 	border-radius: 10px;
 } */
-=======
->>>>>>> 4de9f3ea53e8bce57a8506deb2e353f8a339ea71
