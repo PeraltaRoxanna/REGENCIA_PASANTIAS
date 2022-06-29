@@ -2,7 +2,7 @@
 <?php
 $db = require("conexion.php");
 $p = 0; /* posision array */
-$sql = "DESCRIBE prueba";
+$sql = "DESCRIBE personas";
 $cant = 0;
 ?>
 <?php

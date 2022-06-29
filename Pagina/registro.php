@@ -48,7 +48,7 @@
         </thead>
         <tbody>
           <tr>
-            <?php /* include("FuncionesPHP/registro-consulta.php") */ ?>
+            <?php include("FuncionesPHP/registro-consulta.php") ?>
           </tr>
         </tbody>
       </table>
