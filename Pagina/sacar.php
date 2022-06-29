@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sacar</title>
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="estilos/estilos2.css">
+  <!-- <link rel="stylesheet" href="estilos/estilos2.css"> -->
   <link rel="stylesheet" href="estilos/estilos_all_pages.css">
 </head>
 
@@ -39,7 +39,6 @@
       <h1>Base de datos</h1>
     </article>
 </section>
-    <section class="main-conteiner">
     <main>
       <h2 style="margin-top: 0;">Sacar Algo</h2>
       <div class="input-group input-group-sm mb-3">
@@ -71,7 +70,6 @@
           <input type="submit" value="Sacar" class="btn btn-primary">
         </div>
     </main>
-  </section>
 
 
     <script src="js/bootstrap.js"></script>

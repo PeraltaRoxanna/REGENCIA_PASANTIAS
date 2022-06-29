@@ -39,6 +39,9 @@
       <h1>Base de datos</h1>
     </article>
     </section>
+    <main>
+      <h2>Mover items</h2>
+    </main>
 
     <script src="js/bootstrap.js"></script>
 </body>

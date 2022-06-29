@@ -2,31 +2,24 @@
 <?php
 $db = require("conexion.php");
 $p = 0; /* posision array */
-$sql ="SHOW COLUMNS FROM prueba";
+$sql = "DESCRIBE prueba";
 $cant = 0;
 ?>
-<table><?php
+<?php
 if($rta = $db -> query($sql)){
-  $cant = count($rta->fetch_assoc()) - 1;
-  echo $cant;
-  for($p = 0; $cant != 0; $p++){
-    $fields[$p] = $rta['fields']->fetch_assoc();
-    /* $rtn[$p] = '<th>'.$fields[$p].'<th>';
-    echo $fields[$p]['nombre']; */
-    echo '<th>'.$fields[$p].'<th>';
+  while(true){
+    $fields[$p] = $rta->fetch_assoc();
+    if(!isset($fields[$p]['Field'])){
+      break;
+    }else{
+      if($p == 0){}
+      else{
+        echo '<th>'.$fields[$p]['Field'].'</th>';
+      }  
+    } 
+    $p++;
   }
-  //return $rtn[$p];
 }else{
-  echo "hubo un error";
+  echo "hubo un error: ".$db->connect_error;
 }
-
-
-
-
-
-
-
-
-
-
-?></table>
+?>

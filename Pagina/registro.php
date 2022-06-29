@@ -39,6 +39,12 @@
       <h1>Base de datos</h1>
     </article>
 </section>
+    <main style="display:block;">
+      <h2>Registro de movimientos</h2>
+      <table>
+        <?php include("FuncionesPHP/fields.php");?>
+      </table>
+    </main>
 
     <script src="js/bootstrap.js"></script>
 </body>

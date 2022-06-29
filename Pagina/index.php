@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Base de datos</title>
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="estilos/estilos2.css">
+  <!-- <link rel="stylesheet" href="estilos/estilos2.css"> -->
   <link rel="stylesheet" href="estilos/estilos_all_pages.css">
 </head>
 
@@ -42,13 +42,10 @@
       <h1>Base de datos</h1>
     </article>
   </section>
-  <!-- contenedor del contenedor main con todo el contenido de la pagina -->
-  <section class="main-conteiner">
     <!-- contenedor main.  -->
-    <main>
-  <h2>Buscar Item</h2>
-</main>
-</section>
+  <main>
+    <h2>Buscar Item</h2>
+  </main>
   <!-- JavaScript Bundle with Popper -->
   <script src="js/bootstrap.js"></script>
 </body>
