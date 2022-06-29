@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro</title>
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="estilos/estilos2.css">
   <link rel="stylesheet" href="estilos/estilos_all_pages.css">
 </head>
 
@@ -42,7 +41,16 @@
     <main style="display:block;">
       <h2>Registro de movimientos</h2>
       <table>
-        <?php include("FuncionesPHP/fields.php");?>
+        <thead>
+          <tr>
+            <?php include("FuncionesPHP/fields.php");?>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <?php /* include("FuncionesPHP/registro-consulta.php") */ ?>
+          </tr>
+        </tbody>
       </table>
     </main>
 
