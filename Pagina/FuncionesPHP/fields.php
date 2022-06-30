@@ -4,22 +4,21 @@ $db = require("conexion.php");
 $p = 0; /* posision array */
 $sql = "DESCRIBE personas";
 $cant = 0;
-?>
-<?php
-if($rta = $db -> query($sql)){
-  while(true){
+
+if ($rta = $db->query($sql)) {
+  while (true) {
     $fields[$p] = $rta->fetch_assoc();
-    if(!isset($fields[$p]['Field'])){
+    if (!isset($fields[$p]['Field'])) {
       break;
-    }else{
-      if($p == 0){}
-      else{
-        echo '<th>'.$fields[$p]['Field'].'</th>';
-      }  
-    } 
+    } else {
+      if ($p == 0) {
+      } else {
+        echo '<th>' . $fields[$p]['Field'] . '</th>';
+      }
+    }
     $p++;
   }
-}else{
-  echo "hubo un error: ".$db->connect_error;
+} else {
+  echo "hubo un error: " . $db->connect_error;
 }
 ?>
