@@ -42,10 +42,14 @@
       <h1>Base de datos</h1>
     </article>
   </section>
-    <!-- contenedor main.  -->
-  <main>
+  <!-- contenedor main.  -->
+  <form method="post" action="">
     <h2>Buscar Item</h2>
-  </main>
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" id="basic-addon1">Buscador</span>
+      <input type="text" class="form-control" placeholder="Item ha buscar" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
+    </div>
+  </form>
   <!-- JavaScript Bundle with Popper -->
   <script src="js/bootstrap.js"></script>
 </body>

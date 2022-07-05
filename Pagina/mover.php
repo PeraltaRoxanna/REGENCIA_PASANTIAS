@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mover</title>
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="estilos/estilos2.css">
   <link rel="stylesheet" href="estilos/estilos_all_pages.css">
 </head>
 
@@ -38,12 +37,12 @@
     <article class="nav-title">
       <h1>Base de datos</h1>
     </article>
-    </section>
-    <main>
-      <h2>Mover items</h2>
-    </main>
+  </section>
+  <form method="post" action="">
+    <h2>Mover items</h2>
+  </form>
 
-    <script src="js/bootstrap.js"></script>
+  <script src="js/bootstrap.js"></script>
 </body>
 
 </html>

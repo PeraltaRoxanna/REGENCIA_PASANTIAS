@@ -2,7 +2,7 @@
 <?php
 $db = require("conexion.php");
 $p = 0; /* posision array */
-$sql = "DESCRIBE personas";
+$sql = "DESCRIBE prueba";
 $cant = 0;
 
 if ($rta = $db->query($sql)) {

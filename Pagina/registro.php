@@ -37,24 +37,24 @@
     <article class="nav-title">
       <h1>Base de datos</h1>
     </article>
-</section>
-    <main style="display:block;">
-      <h2>Registro de movimientos</h2>
+  </section>
+  <form method="post" action="" style="display: block;">
+    <h2>Registro de movimientos</h2>
+    <div style="overflow: auto; height:100%;">
       <table>
         <thead>
           <tr>
-            <?php include("FuncionesPHP/fields.php");?>
+            <?php include("FuncionesPHP/fields.php"); ?>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <?php include("FuncionesPHP/registro-consulta.php") ?>
-          </tr>
+          <?php include("FuncionesPHP/registro-consulta.php") ?>
         </tbody>
       </table>
-    </main>
+    </div>
+  </form>
 
-    <script src="js/bootstrap.js"></script>
+  <script src="js/bootstrap.js"></script>
 </body>
 
 </html>
