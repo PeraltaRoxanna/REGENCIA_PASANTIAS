@@ -41,7 +41,7 @@
   <form method="post" action="" style="display: block;">
     <h2>Registro de movimientos</h2>
     <div style="overflow: auto; height:100%;">
-      <table>
+      <table class="table-fixed">
         <thead>
           <tr>
             <?php include("FuncionesPHP/fields.php"); ?>

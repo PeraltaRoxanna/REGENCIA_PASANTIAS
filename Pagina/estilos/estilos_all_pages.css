@@ -120,6 +120,14 @@ th {
 	border-left: thin solid white;
 	padding-left: 1em;
 }
+th:first-child {
+	border: none;
+}
+thead {
+	background-color: white;
+	position: sticky;
+	top: 0;
+}
 /* tr {
 	display: flex;
 	justify-content: space-around;
