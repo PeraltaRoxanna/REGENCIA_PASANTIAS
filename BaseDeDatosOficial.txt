@@ -7,16 +7,16 @@ armario1 varchar(20), armario2 varchar (20), armario3 varchar (20), armario4 var
 create table estantes_por_armarios (ID_EST_ARM int (16) NOT NULL AUTO_INCREMENT, id_armarios int (16) NOT NULL, 
 estante1 varchar (20), estante2 varchar (20), estante3 varchar (20), estante4 varchar (20), estante5 varchar (20), 
 estante6 varchar (20), estante7 varchar (20), estado varchar (20), PRIMARY KEY (id_est_arm), INDEX (id_armarios),
-FOREING KEY (id_iarmarios) REFERENCES armarios (id_armarios)
+FOREIGN KEY (id_armarios) REFERENCES armarios (id_armarios)
 );
 create table items (id_item int (16) NOT NULL AUTO_INCREMENT, estado varchar (20), descripcion varchar (20),
 PRIMARY KEY (id_item) 
 );
 create table items_por_estantes ( id_est int (16) NOT NULL AUTO_INCREMENT, id_item int (16) NOT NULL, 
-estado varchar (20), descripcion varchar (20), PRIMARY KEY (id_est), INDEX (id_item), FOREING KEY (id_item) 
+estado varchar (20), descripcion varchar (20), PRIMARY KEY (id_est), INDEX (id_item), FOREIGN KEY (id_item) 
 REFERENCES items (id_item)
 );
 create table movimientos (id_movimiento int (16) NOT NULL AUTO_INCREMENT, id_item int (16) NOT NULL, Nombre varchar (20),
-Apellido varchar (20), estado varchar (20), PRIMARY KEY (id_movimiento), INDEX (id_item), FOREING KEY (id_item)
+Apellido varchar (20), estado varchar (20), PRIMARY KEY (id_movimiento), INDEX (id_item), FOREIGN KEY (id_item)
 REFERENCES items (id_item)
 );
