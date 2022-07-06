@@ -112,7 +112,6 @@ tbody {
 	overflow: scroll;
 }
 thead {
-	/* display: fixed; */ /* seguro hace falta. No anda */
 	background-color: rgb(248, 249, 250);
 	background-image: linear-gradient(rgb(255, 255, 255), rgb(165, 159, 159));
 }
@@ -128,20 +127,6 @@ thead {
 	position: sticky;
 	top: 0;
 }
-/* tr {
-	display: flex;
-	justify-content: space-around;
-	border: thin solid black;
-} */
-/* tr {
-	display: grid;
-	grid-auto-rows: 1fr;
-	justify-content: center;
-} */
-/* thead tr {
-	display: flex;
-	justify-content: space-between;
-} */
 tbody tr {
 	background-color: rgb(223, 224, 225);
 }
@@ -151,4 +136,42 @@ tbody tr:nth-child(2n) {
 input[type="text"],
 span.input-group-text {
 	max-height: 50px;
+}
+.alert {
+	position: fixed;
+	background-color: rgb(255, 255, 255);
+	top: -300px;
+	opacity: 0;
+	width: 30%;
+	height: 20vh;
+	margin: 0 auto;
+	text-align: center;
+	z-index: 999;
+}
+.alert:focus {
+	transition: 300ms;
+	opacity: 100%;
+	top: 2vh;
+}
+.alert-bg {
+	z-index: 998;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(83, 80, 80, 0);
+}
+.alert:focus + .alert-bg {
+	transition: 300ms;
+	position: absolute;
+	background-color: rgba(83, 80, 80, 0.4);
+}
+.alert-conteiner {
+	display: flex;
+	justify-content: center;
+}
+.alert input {
+	margin-left: 70%;
+	margin-top: 23%;
+	width: auto;
 }

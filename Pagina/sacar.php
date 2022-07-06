@@ -7,11 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sacar</title>
   <link rel="stylesheet" href="css/bootstrap.css">
-  <!-- <link rel="stylesheet" href="estilos/estilos2.css"> -->
   <link rel="stylesheet" href="estilos/estilos_all_pages.css">
 </head>
 
 <body>
+  <div class="alert-conteiner">
+    <div class="alert" tabindex="-1">
+      <p class="alert-txt">La operación se ha realizado correctamente (test)</p>
+      <input type="button" value="Aceptar" class="btn btn-primary">
+    </div>
+    <div class="alert-bg"></div>
+  </div>
+
   <section class="nav-conteiner">
     <nav class="nav-btn">
       <ul class="nav nav-pills">

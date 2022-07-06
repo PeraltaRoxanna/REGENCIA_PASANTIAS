@@ -8,12 +8,17 @@
   <title>Modificaciones</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="estilos/estilos_all_pages.css">
-  <?php
-  include("FuncionesPHP/conexion.php");
-  ?>
 </head>
 
 <body>
+  <div class="alert-conteiner">
+    <div class="alert" tabindex="-1">
+      <p class="alert-txt">La operación se ha realizado correctamente (test)</p>
+      <input type="button" value="Aceptar" class="btn btn-primary">
+    </div>
+    <div class="alert-bg"></div>
+  </div>
+
   <section class="nav-conteiner">
     <!-- barra de busqueda -->
     <nav class="nav-btn">

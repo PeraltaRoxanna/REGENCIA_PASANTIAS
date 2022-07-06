@@ -7,11 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Base de datos</title>
   <link rel="stylesheet" href="css/bootstrap.css">
-  <!-- <link rel="stylesheet" href="estilos/estilos2.css"> -->
   <link rel="stylesheet" href="estilos/estilos_all_pages.css">
+
 </head>
 
 <body>
+  <div class="alert-conteiner">
+    <!-- Para hacer focus a un elemento que no sea un input debo de tener un tabindex
+  y le pongo el -1 porque así no es accesible por teclado. Solo es a partir del 0 -->
+    <div class="alert" tabindex="-1">
+      <p class="alert-txt">La operacion se ha realizado correctamente (test)</p>
+      <input type="button" value="Aceptar" class="btn btn-primary">
+    </div>
+    <div class="alert-bg"></div>
+  </div>
   <!-- conteiner del nav/barra de navegacion -->
   <section class="nav-conteiner">
     <!--Barra de busqueda-->
@@ -53,9 +62,17 @@
       </span>
       <input type="text" class="form-control" placeholder="Item ha buscar" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
     </div>
+    <input onclick="focusAlert()" class="boton" type="button" value="ON"></input>
   </form>
   <!-- JavaScript Bundle with Popper -->
   <script src="js/bootstrap.js"></script>
+  <script type="text/javascript">
+    const btn = document.querySelector(".boton");
+    const aler = document.querySelector(".alert");
+    btn.addEventListener("click", () => {
+      aler.focus();
+    });
+  </script>
 </body>
 
 </html>

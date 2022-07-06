@@ -13,9 +13,6 @@ $fecha = include("fecha.php");
 
 $sql = "INSERT INTO items(item, nombre, ubicacion, razon, fecha, estado) 
 VALUES ('{$item}', '{$nombre}', '{$ubicacion}', '{$razon}', '{$fecha}', 'si')";
-if ($rta = $db->query($sql)) {
-  echo '<script>alert("La operación se ha realizado correctamente")</script>';
-} else {
-  echo '<script>alert("La operación no se ha realizado")</script>';
-}
+include("consulta.php");
+consultar($sql);
 ?>
