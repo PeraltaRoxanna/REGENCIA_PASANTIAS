@@ -9,9 +9,8 @@ if (isset($_POST['razon'])) {
 } else {
   $razon = null;
 }
-$fecha = date("Y-m-d H:i:s");
-/* CHEKEAR ESTO */
-echo $fecha;
+$fecha = include("fecha.php");
+
 $sql = "INSERT INTO items(item, nombre, ubicacion, razon, fecha, estado) 
 VALUES ('{$item}', '{$nombre}', '{$ubicacion}', '{$razon}', '{$fecha}', 'si')";
 if ($rta = $db->query($sql)) {
