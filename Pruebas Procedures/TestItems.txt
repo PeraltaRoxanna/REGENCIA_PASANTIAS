@@ -1,2 +1,17 @@
-create database testitems;
-create table items;
+create procedure agregaritem(
+    `IDitem` int(16),
+    `IDEstArm` int(16),
+    `NomPer` varchar(20),
+    `ApePer` varchar(20),
+    `esta` varchar(20),
+    `fec` date,
+    `DescrItem` varchar(20)
+)
+BEGIN
+insert into items(ID_item,estado,descripcion)
+VALUES(IDitem,esta,DescrItem);
+Insert into items_por_estantes(id_item_est,id_item,estado,descripcion)
+VALUES(IDEstArm,IDitem,esta,DescrItem);
+Insert INTO movimientos(id_item,Nombre,Apellido,estado,fecha,Que_retira)
+VALUES(IDitem,NomPer,ApePer,esta,fec,descrItem);
+END
