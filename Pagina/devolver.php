@@ -44,7 +44,7 @@
     </article>
   </section>
   <section class="main-conteiner">
-    <form method="post" action="">
+    <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
       <h2 style="margin-top: 0;">Devolver</h2>
       <div class="input-group input-group-sm mb-3">
         <span class="input-group-text" id="basic-addon1">Item</span>

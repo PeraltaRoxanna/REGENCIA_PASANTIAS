@@ -42,23 +42,23 @@
     </article>
   </section>
   <!-- <section class="main-conteiner"> -->
-  <form method="post" action="">
+  <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
     <h2 style="margin-top: 0;">Agregar</h2>
     <!-- Creo que es mejor tener 2 paginas con agregar y con devolver -->
     <div class="input-group input-group-sm mb-3">
-      <span class="input-group-text" id="basic-addon1">Item</span>
-      <input type="text" class="form-control" placeholder="Inserte elemento a agregar" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
+      <span class="input-group-text" id="basic-addon1">Buscar</span>
+      <input name="item" type="text" required class="form-control" placeholder="Inserte elemento a agregar" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
     </div>
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" id="basic-addon1">Ubicación</span>
-      <input type="text" class="form-control" placeholder="Item buscado" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
+      <input name="ubicacion" required type="text" class="form-control" placeholder="Item buscado" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
     </div>
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" id="basic-addon1">Quien agrega?</span>
-      <input type="text" class="form-control" placeholder="Nombre y apellido" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
+      <input name="nombre" required type="text" class="form-control" placeholder="Nombre y apellido" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
     </div>
     <div class="form-floating">
-      <textarea class="form-control" id="floatingTextarea2" style="height: 100px;" placeholder="COMENTARIO"></textarea>
+      <textarea name="razon" class="form-control" id="floatingTextarea2" style="height: 100px;" placeholder="COMENTARIO"></textarea>
       <label for="floatingTextarea2">Razón/Comentario</label>
     </div>
     <div class="input-conteiner">
@@ -66,6 +66,11 @@
     </div>
   </form>
   <script src="js/bootstrap.js"></script>
+  <?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include("FuncionesPHP/Fagregar.PHP");
+  }
+  ?>
 </body>
 
 </html>
