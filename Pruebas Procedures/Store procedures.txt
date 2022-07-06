@@ -1,0 +1,65 @@
+Base de datos y tabla de practica:
+
+create DATABASE test;
+use test;
+create TABLE usuarios(id int AUTO_INCREMENT not null PRIMARY KEY, nombre varchar(20), apellido varchar(20), edad int, pais varchar(20));
+create table paises(ID_pais int AUTO_INCREMENT not null PRIMARY KEY,nombre_pais varchar(20));
+insert INTO usuarios VALUES(1,"Pablo","araya",12,"Argentina");
+insert into paises VALUES(1,"Argentina");
+-------------------------------------------------------------------------------------------------------------------
+
+-- Para poder usar un store procedure hay que inicializarlo y en el caso de tener parametros asignarselos asì
+IN = Solo entrada
+OUT = Solo salida
+INOUT = salida y entrada
+
+CREATE PROCEDURE insertaralumno(
+	IN `pID` int,
+	IN `pNom` varchar(20),
+	IN `pApe` varchar(20),
+	IN `pEdad`int,
+	IN `pPais` varchar(20))
+
+Insert into usuarios(id,nombre,apellido,edad,pais) values (pID,pNom,pApe,pEdad,pPais)
+
+Y se ejecuta un procedure en phpMyAdmin con el comando call y pasandole los argumentos que queramos darle como
+parametros 
+
+call insertaralumno(2,"pepe","suarez",19,"argentina")
+
+-------------------------------------------------------------------------------------------------------------------
+
+Repaso inner join entre 2 tablas
+
+select * from usuarios
+inner join paises
+on paises.nombre_pais = usuarios.pais
+
+Esto nos va a mostrar todos los datos de ambas tablas, tanto la de usuarios como la de pais en donde 
+el nombre del pais dentro de la tabla paises sea igual a pais dentro de la tabla usuario
+
+Otra forma de hacerlo sería sin el inner join de la siguiente forma
+
+SELECT * from usuarios, paises
+WHERE usuarios.pais = paises.nombre_pais
+
+
+-------------------------------------------------------------------------------------------------------------------
+Inner join con campos especificicos
+
+SELECT nombre, nombre_pais
+FROM usuarios INNER JOIN paises
+WHERE usuarios.pais = paises.nombre_pais
+
+Otro ejemplo
+
+SELECT nombre,ID_pais
+from usuarios INNER JOIN paises
+WHERE usuarios.pais = paises.nombre_pais
+
+Ultimo ejemplo
+
+SELECT nombre,nombre_pais,ID_Pais
+from usuarios INNER JOIN paises
+WHERE usuarios.pais = paises.nombre_pais
+-------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,2 @@
+create database testitems;
+create table items;

@@ -1,0 +1,56 @@
+-- Estructura de tabla para la tabla `alumnos`
+
+CREATE TABLE alumnos (
+  id_alumno int NOT NULL AUTO_INCREMENT primary key,
+  id_usuario int NOT NULL,
+  nombre varchar(50) NOT NULL,
+  apellido varchar(50) NOT NULL,
+  id_tipo_doc int not null,
+  numero_doc varchar(50) NOT NULL,
+  telefono int NOT NULL,
+  sexo varchar(50) NOT NULL,
+  direccion varchar(60) NOT NULL,
+  provincia varchar(60) NOT NULL,
+  nacionalidad varchar(50) NOT NULL,
+  fecha_nacimiento date NOT NULL,
+  id_estado int NOT NULL
+);
+
+CREATE TABLE estados(
+	id_estado int not null,
+	estado varchar(50)
+);
+
+CREATE TABLE LOG(
+	id_log int not null,
+	id_usuario int not null,
+	accion varchar(100) not null,
+	fecha date not null,
+	hora time not null
+);
+
+create table tipos_documentos(
+	id_tipo_doc int not null,
+	tipo_doc varchar(100) not null
+);
+
+-- Store procedures
+
+CREATE PROCEDURE Agregaralumno(
+    `pID` int ,
+    `pNom` varchar(50),
+    `pApe` varchar(50),
+    `pIdtipodoc` int,
+    `pNumdoc` varchar(50),
+    `pTel` int,
+    `pSexo` varchar(50),
+    `pDire` varchar(60),
+    `pProv` varchar(60),
+    `pNacion` varchar(50),
+    `pFechanac` date,
+    `pIdEst` int)
+Insert into alumnos
+(id_usuario,nombre,apellido,id_tipo_doc,numero_doc,telefono,sexo,direccion,provincia,nacionalidad,fecha_nacimiento,id_estado)
+values(pID,pNom,pApe,pIdtipodoc,pNumdoc,pTel,pSexo,pDire,pProv,pNacion,pFechanac,PIdEst)
+Insert into LOG(id_log,id_usuario,accion,fecha,hora)
+values (1,pID,'Agregado Usuario',CURRENT_DATE(),CURRENT_TIME())
