@@ -1,13 +1,13 @@
 <?php
-$db = include("conexion.php");
+/* la conec esta en el "HTML" */
 $p = 0;
 $p_one = 1;
 $cant_cols = -1;
 /* la consulta que queremos mostrar */
-$sql = "SELECT * FROM prueba";
+$sql = "SELECT * FROM " . tabla();
 $rta = $db->query($sql);
 /* consultado la cantidad de columnas */
-$col_sql = "DESCRIBE prueba";
+$col_sql = "DESCRIBE " . tabla();
 $col_rta = $db->query($col_sql);
 
 /* sacando la cantidad de columnas */ /* TERMINADO */

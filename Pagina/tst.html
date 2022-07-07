@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="FuncionesPHP/ajajax.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <!-- <input type="text" onkeyup="escribir(get());" id="txt" name="txt">
+  <script>
+    function get() {
+
+      return document.getElementById("txt").value;
+    }
+    function escribir(texto) {
+      alert(texto);
+    }
+  </script>
+ -->
+
+  <input type="text" onkeyup="buscador($('#rta').val())" id="rta" name="rta">
+  <p class="search-rta">gg</p>
+  <script type="text/javascript">
+    function get() {
+      return document.getElementById("rta").value;
+    }
+
+    function buscador(buscar) {
+      /* hasta aca todo bien */
+      console.log(buscar);
+      var parametro = {
+        "buscar": buscar
+      };
+      alert("hi");
+      $.ajax({
+        data: parametro,
+        type: 'POST',
+        url: 'FuncionesPHP/buscador.php',
+        success: function (data) {
+          /* document.getElementById("rta").innerHTML = data; */
+          document.querySelector(".search-rta").innerHTML = data;
+        }
+      });
+      alert("h");
+    }
+  </script><br><br>Abajo del script: <br>
+  <input type="text" onkeyup="buscador($('#rta').val())" id="rta" name="rta">
+  <p class="search-rta">gg</p>
+</body>
+
+</html>

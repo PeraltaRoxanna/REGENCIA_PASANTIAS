@@ -175,3 +175,10 @@ span.input-group-text {
 	margin-top: 23%;
 	width: auto;
 }
+.search-rta {
+	overflow-y: scroll;
+	grid-row: span 4;
+	background-color: white;
+	border: medium solid black;
+	/* aca haria el display grid */
+}

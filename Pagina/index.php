@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <script src="FuncionesPHP/ajajax.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <div class="alert-conteiner">
     <!-- Para hacer focus a un elemento que no sea un input debo de tener un tabindex
   y le pongo el -1 porque así no es accesible por teclado. Solo es a partir del 0 -->
@@ -60,19 +61,40 @@
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
         </svg>
       </span>
-      <input type="text" class="form-control" placeholder="Item ha buscar" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
+      <input onkeyup="buscador($('#rta').val());" name="rta" id="rta" type="text" class="form-control" placeholder="Item ha buscar" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
     </div>
-    <input onclick="focusAlert()" class="boton" type="button" value="ON"></input>
+    <div class="search-rta">
+      <h5>Resultados encontrados:</h5>
+      <p class="search-rta-p"></p>
+      <script type="text/javascript">
+        function get() {
+          return document.getElementById("rta").value;
+        }
+
+        function buscador(buscar) {
+          /* let bus = $(buscar).val(); */
+          var parametro = {
+            "buscar": buscar
+          };
+          $.ajax({
+            data: parametro,
+            type: 'POST',
+            url: 'FuncionesPHP/buscador.php',
+            success: function(data) {
+              /* document.getElementById("rta").innerHTML = data; */
+              document.querySelector(".search-rta-p").innerHTML = data;
+            }
+          });
+        }
+      </script>
+    </div>
+    <!--     <div class="input-conteiner">
+      <input onclick="buscador($('#rta').val());" type="button" value="Buscar" class="btn btn-primary">
+    </div> -->
   </form>
   <!-- JavaScript Bundle with Popper -->
   <script src="js/bootstrap.js"></script>
-  <script type="text/javascript">
-    const btn = document.querySelector(".boton");
-    const aler = document.querySelector(".alert");
-    btn.addEventListener("click", () => {
-      aler.focus();
-    });
-  </script>
+
 </body>
 
 </html>

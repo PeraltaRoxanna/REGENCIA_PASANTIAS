@@ -1,17 +1,17 @@
 <?php
-/* $db = include("conexion.php"); */
+$db = include("conexion.php");
 $fecha = include("fecha.php");
 /* depende de lo que encuentre el buscador */
-$item = $_POST['item'];
+$item = strtolower($_POST['item']);
 /* la ubicacion tiene que saverla el cliente, no yo.
 AUNQUE si para el historial o podria hacer una relacion.
 Tecnicamente NO hacer la relacion es meter datos al pedo*/
 /* $ubicacion = $_POST['ubicacion']; */
-$nombre = $_POST['nombre']; /* quien devuelve */
+$nombre = strtolower($_POST['nombre']); /* quien devuelve */
 /* Me parece que re al pedo la razon en devolver */
-$razon = $_POST['razon'];
+$razon = strtolower($_POST['razon']);
 
-$sql = "UPDATE items SET estado = 'si' WHERE item = '$item'";
+$sql = "UPDATE " . tabla() . " SET estado = 'si' WHERE item = '$item'";
 
 /* yo no debería de tocar nada del historial, eso sería full procedure */
 
@@ -25,4 +25,4 @@ if ($rta = $db->query($sql)) {
 } */
 
 include("consulta.php");
-consultar($sql);
+consultar($sql, $db);

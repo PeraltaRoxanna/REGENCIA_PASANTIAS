@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <?php $db = include("FuncionesPHP/conexion.php"); ?>
   <section class="nav-conteiner">
     <nav class="nav-btn">
       <ul class="nav nav-pills">

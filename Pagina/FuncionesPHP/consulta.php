@@ -1,7 +1,6 @@
 <?php
-function consultar($consulta)
+function consultar($consulta, $db)
 {
-  $db = include("conexion.php");
   if ($db->query($consulta)) {
     echo '<script>
     const aler = document.querySelector(".alert").focus();

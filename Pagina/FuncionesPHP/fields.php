@@ -1,8 +1,7 @@
 <!-- NOMBRE  DE LOS CAMPOS -->
 <?php
-$db = require("conexion.php");
 $p = 0; /* posision array */
-$sql = "DESCRIBE prueba";
+$sql = "DESCRIBE " . tabla();
 $cant = 0;
 
 if ($rta = $db->query($sql)) {

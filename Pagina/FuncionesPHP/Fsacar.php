@@ -1,14 +1,14 @@
 <?php
-/* $db = include("conexion.php"); */
+$db = include("conexion.php");
 $fecha = include("FuncionesPHP/fecha.php");
-$item = $_POST['item'];
-$nombre = $_POST['nombre'];
-$devuelvo = $_POST['devuelvo'];
-$razon = $_POST['razon'];
+$item = strtolower($_POST['item']);
+$nombre = strtolower($_POST['nombre']);
+$devuelvo = strtolower($_POST['devuelvo']);
+$razon = strtolower($_POST['razon']);
 $fecha_devolucion = $_POST['tiempo'];
 
 /* Podria hacer que segun el valor de devulevo el estado sea si,no,eliminado */
-$sql = "UPDATE items SET estado = 'no' WHERE item = '{$item}'";
+$sql = "UPDATE " . tabla() . " SET estado = 'no' WHERE item = '{$item}'";
 
 
 /* if ($rta = $db->query($sql)) {
@@ -18,4 +18,4 @@ $sql = "UPDATE items SET estado = 'no' WHERE item = '{$item}'";
   echo $db->connect_error;
 } */
 include("consulta.php");
-consultar($sql);
+consultar($sql, $db);
