@@ -133,9 +133,13 @@ tbody tr {
 tbody tr:nth-child(2n) {
 	background-color: rgb(182, 183, 184);
 }
-input[type="text"],
-span.input-group-text {
+input,
+span.input-group-text,
+[for^="btn"] {
 	max-height: 50px;
+}
+[for^="btn"] {
+	padding-top: 1.2em;
 }
 .alert {
 	position: fixed;
@@ -181,4 +185,9 @@ span.input-group-text {
 	background-color: white;
 	border: medium solid black;
 	/* aca haria el display grid */
+}
+.search-rta-p {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: auto;
 }

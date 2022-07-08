@@ -65,12 +65,8 @@
     </div>
     <div class="search-rta">
       <h5>Resultados encontrados:</h5>
-      <p class="search-rta-p"></p>
+      <div class="search-rta-p"></div>
       <script type="text/javascript">
-        function get() {
-          return document.getElementById("rta").value;
-        }
-
         function buscador(buscar) {
           /* let bus = $(buscar).val(); */
           var parametro = {

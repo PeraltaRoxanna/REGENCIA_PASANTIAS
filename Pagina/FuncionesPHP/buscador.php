@@ -3,17 +3,15 @@ $db = include("conexion.php");
 $buscado = strtolower($_POST['buscar']);
 
 
-$sql = "SELECT * FROM " . tabla() . " WHERE item LIKE '%" . $buscado . "%'";
+$sql = "SELECT item, ubicacion FROM " . tabla() . " WHERE item LIKE '%" . $buscado . "%' OR ubicacion LIKE '%" . $buscado . "%'";
 if ($rta = $db->query($sql)) {
   while ($resultado = $rta->fetch_assoc()) { ?>
-    <!-- voy a tener que hacer un array con 3 p y un flexbox para que quede piola. O un grid -->
-    <!-- voy a intentar el grid asi pruebo con grid-flow infinito -->
-    <p class="search-rta-p"><?php echo $resultado['item']; ?> - <?php echo $resultado['ubicacion'] ?></p>
-
+    <p><?php echo $resultado['item']; ?> </p>
+    <p> <?php echo $resultado['ubicacion'] ?></p>
 <?php /* break; */
   }
 } else {
-  echo "conec problem " . $buscado;
+  echo "ERROR: " . $buscado;
 }
 
 
