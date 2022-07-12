@@ -49,7 +49,7 @@
   </section>
   <!-- <section class="main-conteiner"> -->
   <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-    <h2 style="margin-top: 0;">Agregar</h2>
+    <h2 style="margin-top: 0;">Crear Elemento</h2>
     <!-- Creo que es mejor tener 2 paginas con agregar y con devolver -->
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" id="basic-addon1">
@@ -60,6 +60,11 @@
       <input name="item" type="text" required class="form-control" placeholder="Inserte elemento a agregar" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
     </div>
     <div class="input-group input-group-sm mb-3">
+      <select>
+        <option value="">f</option>
+      </select>
+    </div>
+    <!-- <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" id="basic-addon1">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
           <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
@@ -76,7 +81,7 @@
         </svg>
       </span>
       <input name="nombre" required type="text" class="form-control" placeholder="Nombre y apellido" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
-    </div>
+    </div> -->
     <div class="form-floating">
       <textarea name="razon" class="form-control" id="floatingTextarea2" style="height: 100px;" placeholder="COMENTARIO"></textarea>
       <label for="floatingTextarea2">Razón/Comentario</label>
