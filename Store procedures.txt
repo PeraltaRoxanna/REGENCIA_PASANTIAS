@@ -47,7 +47,6 @@ Otra forma de hacerlo sería sin el inner join de la siguiente forma
 SELECT * from usuarios, paises
 WHERE usuarios.pais = paises.nombre_pais
 
-
 -------------------------------------------------------------------------------------------------------------------
 Inner join con campos especificicos
 

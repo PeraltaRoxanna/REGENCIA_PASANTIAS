@@ -20,3 +20,7 @@ create table movimientos (id_movimiento int (16) NOT NULL AUTO_INCREMENT, id_ite
 Apellido varchar (20), estado varchar (20), PRIMARY KEY (id_movimiento), INDEX (id_item), FOREIGN KEY (id_item)
 REFERENCES items (id_item)
 );
+-- Procedure
+
+create procedure AgregarItem(`nomIte` varchar(20))
+insert INTO items(descripcion,estado) VALUES (`nomIte`,"Agregado con éxito");
