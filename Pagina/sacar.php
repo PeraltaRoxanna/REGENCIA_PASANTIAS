@@ -26,7 +26,7 @@
           <a class="nav-link" href="index.php">Buscar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="agregar.php">Agregar</a>
+          <a class="nav-link" href="crear.php">Crear</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="devolver.php">Devolver</a>

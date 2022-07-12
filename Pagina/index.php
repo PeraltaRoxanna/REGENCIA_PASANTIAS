@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <script src="FuncionesPHP/ajajax.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="FuncionesPHP/ajajax.js" crossorigin="anonymous"></script>
   <div class="alert-conteiner">
     <!-- Para hacer focus a un elemento que no sea un input debo de tener un tabindex
   y le pongo el -1 porque así no es accesible por teclado. Solo es a partir del 0 -->
@@ -31,7 +31,7 @@
           <a class="nav-link active" href="index.php">Buscar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="agregar.php">Agregar</a>
+          <a class="nav-link" href="crear.php">Crear</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="devolver.php">Devolver</a>

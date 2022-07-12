@@ -11,11 +11,8 @@ if (isset($_POST['razon'])) {
 }
 $fecha = include("fecha.php");
 
-/* $sql = "INSERT INTO " . tabla() . "(item, nombre, ubicacion, razon, fecha, estado) 
-VALUES ('{$item}', '{$nombre}', '{$ubicacion}', '{$razon}', '{$fecha}', 'si')"; */
-$sql = "call AgregarItem('$item');";
-$sql2 = "call agregarItemEstante('$item');";
+$sql = "INSERT INTO " . tabla() . "(item, nombre, ubicacion, razon, fecha, estado) 
+VALUES ('{$item}', '{$nombre}', '{$ubicacion}', '{$razon}', '{$fecha}', 'si')";
 include("consulta.php");
 consultar($sql, $db);
-consultar($sql2, $db);
 ?>
