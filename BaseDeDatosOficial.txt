@@ -24,3 +24,10 @@ REFERENCES items (id_item)
 
 create procedure AgregarItem(`nomIte` varchar(20))
 insert INTO items(descripcion,estado) VALUES (`nomIte`,"Agregado con éxito");
+
+create procedure AgregarItemEstante(`nomItem` varchar(20))
+insert into items_por_estantes(id_item,descripcion,estado)
+SELECT id_item,descripcion,estado FROM items WHERE descripcion=`nomItem`
+
+call AgregarItem("Pirulin");
+call agregarItemEstante("Pirulin");
