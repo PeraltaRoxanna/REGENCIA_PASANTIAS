@@ -180,6 +180,7 @@ span.input-group-text,
 	width: auto;
 }
 .search-rta {
+	display: none;
 	overflow-y: scroll;
 	grid-row: span 4;
 	background-color: white;

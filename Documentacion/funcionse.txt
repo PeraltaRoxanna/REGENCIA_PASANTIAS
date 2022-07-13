@@ -1,0 +1,2 @@
+funciones:
+crear: crea un elemento y selecciona armario y estante

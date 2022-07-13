@@ -1,0 +1,16 @@
+va a tener quien EJ: retira algo, pero es importante que no lo llamemos usuario porque un usuario significa quien usa la aplicacion
+o sea que hay que registrar quien usa y solo queremos saber quien EJ: movio algo
+no va a tener ABM de armarios o estantes pero si yo agrego un armario en la DB tiene que aparecer solo en la APP.
+cada accion tiene su fecha, su get time, pero ninguna tiene una fecha futura EJ: cuando voy a devolver.
+Cuando busco, en le data grid me tiene que aparecer el estado del item que sería prestado, no prestado.
+En el registro/historial se tiene que ver la accion
+
+en casos de uso nos damos cuenta de que cada seccion tiene un solo uso y EJ: buscar item se repite en todas, menos registro,
+y significa que dividimos mal las secciones. Tenemos que hacer que desde la pagina de buscar pasemos con el item ya seleccionado
+a otro formulario para ejecutar una accion
+
+tips: siempre hacer la aplicacion AB (aprueba de boludos)o sea que el usuario no sepa tirarnos una excusa si hizo algo mal
+
+al retirar un item yo solo tengo que retirar y cambiar el estado a prestado. Si lo van a devolver o no, no me interesa
+
+cuando busco un item segun su nombre (y quizas ubicacion) aparecera: nombre-ubicacion-estado

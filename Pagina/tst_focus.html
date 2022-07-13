@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .focused {
+      display: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    /*     .btn:focus+.focused {
+      display: block;
+    } */
+  </style>
+</head>
+
+<body>
+  <input value="j" type="text" name="" id="" class="btn" onkeyup="setDisplay();">
+  <div class="focused">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore illum temporibus itaque laboriosam consequatur
+    neque aperiam vitae <a href="https://github.com/PeraltaRoxanna/REGENCIA_PASANTIAS">hola</a>, ex quam totam debitis
+    obcaecati dolore natus nemo rerum quis? Commodi,
+    odit. <input type="submit" name="qu" id="">
+    <button>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, qui aperiam quae impedit dolorum ipsum
+      dolores repellendus deserunt nesciunt atque aliquid aspernatur harum molestiae officiis odio delectus. Possimus,
+      error inventore?</button>
+    <p class="selec" value="hola">Seleccioname</p>
+  </div>
+
+
+  <script>
+    const input = document.querySelector(".btn");
+    const focused = document.querySelector(".focused");
+    const rtas = document.querySelector(".selec");
+    alert(rta)
+    focused.addEventListener("click", () => {
+      focused.setAttribute("style", "display:none;")
+    });
+    function setDisplay() {
+      focused.setAttribute("style", "display:block;")
+    }
+    rtas.addEventListener("click", () => {
+      /* let rtt = document.querySelector(".selec").innerHTML; */
+      /* esto modifica el elemento html de base y como ya escibi en el no vemos nada */
+      /* input.setAttribute("value", rtt); */
+      /* este lo hace al tiempo real */
+      input.value = rtas.innerHTML;
+
+    });
+  </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

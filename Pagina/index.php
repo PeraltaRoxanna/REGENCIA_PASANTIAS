@@ -63,11 +63,16 @@
       </span>
       <input onkeyup="buscador($('#rta').val());" name="rta" id="rta" type="text" class="form-control" placeholder="Item ha buscar" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
     </div>
+    <!-- resultado buscador (on keyup buscador) -->
+    <!-- si lo hago con focus apenas selecciono un item ya desaparece y lo puedo hacer con css unicamente
+  pero al apretar el input aparece el buscador aunque no haya puesto nada. Podría activar el focus con js
+y reaccionar a el con css??? -->
     <div class="search-rta">
       <h5>Resultados encontrados:</h5>
       <div class="search-rta-p"></div>
       <script type="text/javascript">
         function buscador(buscar) {
+          setDisplay();
           /* let bus = $(buscar).val(); */
           var parametro = {
             "buscar": buscar
@@ -84,11 +89,27 @@
         }
       </script>
     </div>
-    <!--     <div class="input-conteiner">
-      <input onclick="buscador($('#rta').val());" type="button" value="Buscar" class="btn btn-primary">
-    </div> -->
+    <!-- h2 nueva ubicacion -->
+    <!-- selecs con ubicaciones -->
+    <!-- boton mover -->
   </form>
-  <!-- JavaScript Bundle with Popper -->
+  <script>
+    const focused = document.querySelector(".search-rta");
+    const searcher = document.querySelector("#rta");
+
+    focused.addEventListener("click", () => {
+      focused.setAttribute("style", "display:none;")
+    });
+
+    function setDisplay() {
+      focused.setAttribute("style", "display:block;")
+    }
+
+    function setSearch(txt_php) {
+      /* let p = document.querySelector(".search-select").innerHTML; */
+      searcher.value = txt_php;
+    }
+  </script>
   <script src="js/bootstrap.js"></script>
 
 </body>

@@ -47,7 +47,7 @@
     </article>
   </section>
   <form method="post" action="<?php echo $_SERVER["PHP_SELF"] ?>">
-    <h2 style="margin-top: 0;">Sacar Algo</h2>
+    <h2 style="margin-top: 0;">Retirar</h2>
     <!-- acá por ser devolver solo se debería mostrar lo que tenga estado "no" -->
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" id="basic-addon1">
