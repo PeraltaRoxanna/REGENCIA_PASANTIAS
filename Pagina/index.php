@@ -53,7 +53,7 @@
     </article>
   </section>
   <!-- contenedor main.  -->
-  <form method="post" action="">
+  <form class="main" method="POST" action=" <?php $_SERVER['PHP_SELF'] ?>">
     <h2>Buscar Item</h2>
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" id="basic-addon1">
@@ -61,19 +61,14 @@
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
         </svg>
       </span>
-      <input onkeyup="buscador($('#rta').val());" name="rta" id="rta" type="text" class="form-control" placeholder="Item ha buscar" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
+      <input onkeyup="buscador($('#rta').val());" name="buscado" id="rta" type="text" class="form-control" placeholder="Item ha buscar" aria-label="Username" required aria-describedby="basic-addon1" title="nada de carácteres raros" pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
     </div>
-    <!-- resultado buscador (on keyup buscador) -->
-    <!-- si lo hago con focus apenas selecciono un item ya desaparece y lo puedo hacer con css unicamente
-  pero al apretar el input aparece el buscador aunque no haya puesto nada. Podría activar el focus con js
-y reaccionar a el con css??? -->
     <div class="search-rta">
       <h5>Resultados encontrados:</h5>
       <div class="search-rta-p"></div>
       <script type="text/javascript">
         function buscador(buscar) {
-          setDisplay();
-          /* let bus = $(buscar).val(); */
+          /* setDisplay(); */
           var parametro = {
             "buscar": buscar
           };
@@ -82,36 +77,63 @@ y reaccionar a el con css??? -->
             type: 'POST',
             url: 'FuncionesPHP/buscador.php',
             success: function(data) {
-              /* document.getElementById("rta").innerHTML = data; */
               document.querySelector(".search-rta-p").innerHTML = data;
             }
           });
         }
       </script>
     </div>
-    <!-- h2 nueva ubicacion -->
-    <!-- selecs con ubicaciones -->
-    <!-- boton mover -->
+    <!--Barra de busqueda-->
+    <nav class="nav-btn">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <input type="submit" class="nav-link ac dev" value="Devolver" name="where">
+        </li>
+        <li class="nav-item">
+          <input type="submit" class="nav-link ac ret" value="Retirar" name="where">
+        </li>
+        <li class="nav-item">
+          <input type="submit" class="nav-link ac mod" value="Modificar Ubicación" name="where">
+        </li>
+      </ul>
+    </nav>
   </form>
   <script>
     const focused = document.querySelector(".search-rta");
     const searcher = document.querySelector("#rta");
 
-    focused.addEventListener("click", () => {
+    /* focused.addEventListener("click", () => {
       focused.setAttribute("style", "display:none;")
-    });
+    }); */
 
-    function setDisplay() {
-      focused.setAttribute("style", "display:block;")
-    }
+    /*  function setDisplay() {
+       focused.setAttribute("style", "display:block;")
+     } */
 
     function setSearch(txt_php) {
-      /* let p = document.querySelector(".search-select").innerHTML; */
       searcher.value = txt_php;
     }
   </script>
   <script src="js/bootstrap.js"></script>
+  <script>
+    const dev = document.querySelector(".dev");
+    const ret = document.querySelector(".ret");
+    const mod = document.querySelector(".mod");
+    const fo = document.querySelector(".main");
 
+    dev.addEventListener("click", () => {
+      fo.action = "devolver.php";
+      fo.submit();
+    });
+    ret.addEventListener("click", () => {
+      fo.action = "sacar.php";
+      fo.submit();
+    });
+    mod.addEventListener("click", () => {
+      fo.action = "mover.php";
+      fo.submit();
+    });
+  </script>
 </body>
 
 </html>

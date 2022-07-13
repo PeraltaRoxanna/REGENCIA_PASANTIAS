@@ -47,7 +47,7 @@
       <h1>Base de datos</h1>
     </article>
   </section>
-  <form method="post" action="">
+  <form method="post" action="" class="main">
     <h2>Mover items</h2>
     <!-- buscador -->
     <div class="input-group input-group-sm mb-3">

@@ -46,7 +46,7 @@
       <h1>Base de datos</h1>
     </article>
   </section>
-  <form method="post" action="<?php echo $_SERVER["PHP_SELF"] ?>">
+  <form method="post" action="<?php echo $_SERVER["PHP_SELF"] ?>" class="main">
     <h2 style="margin-top: 0;">Retirar</h2>
     <!-- acá por ser devolver solo se debería mostrar lo que tenga estado "no" -->
     <div class="input-group input-group-sm mb-3">

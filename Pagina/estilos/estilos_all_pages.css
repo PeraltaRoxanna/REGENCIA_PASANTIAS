@@ -51,7 +51,7 @@ h3 {
 	background-color: #40b3e0;
 	color: white;
 }
-form {
+.main {
 	width: 80%;
 	margin: 10vh auto 0;
 	border: medium solid black;
@@ -180,7 +180,7 @@ span.input-group-text,
 	width: auto;
 }
 .search-rta {
-	display: none;
+	/* display: none; */
 	overflow-y: scroll;
 	grid-row: span 4;
 	background-color: white;
@@ -189,6 +189,17 @@ span.input-group-text,
 }
 .search-rta-p {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-auto-rows: auto;
+}
+.search-select {
+	display: flex;
+	justify-content: space-between;
+}
+.search-select:hover {
+	background-color: rgb(182, 183, 184);
+	border: thin solid black;
+}
+.ac {
+	width: auto;
 }

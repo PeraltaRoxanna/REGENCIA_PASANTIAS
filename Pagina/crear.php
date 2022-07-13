@@ -49,7 +49,7 @@
     </article>
   </section>
   <!-- <section class="main-conteiner"> -->
-  <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+  <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" class="main">
     <h2 style="margin-top: 0;">Crear Elemento</h2>
     <!-- Creo que es mejor tener 2 paginas con agregar y con devolver -->
     <div class="input-group input-group-sm mb-3">

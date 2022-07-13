@@ -1,4 +1,5 @@
 <?php
+$devolver = false;
 $db = include("conexion.php");
 $fecha = include("fecha.php");
 /* depende de lo que encuentre el buscador */
@@ -25,4 +26,4 @@ if ($rta = $db->query($sql)) {
 } */
 
 include("consulta.php");
-consultar($sql, $db);
+consultar($sql, $db, $devolver);

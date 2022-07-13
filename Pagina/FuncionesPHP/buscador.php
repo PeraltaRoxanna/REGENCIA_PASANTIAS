@@ -9,9 +9,11 @@ $sql = "SELECT item, ubicacion FROM " . tabla() . " WHERE item LIKE '%" . $busca
 $sql = "SELECT $item_camp FROM items WHERE $item_camp LIKE '%$buscado%'";
 if ($rta = $db->query($sql)) {
   while ($resultado = $rta->fetch_assoc()) { ?>
-    <p class="search-select" onclick="setSearch('<?php echo $resultado[$item_camp]; ?>')"><?php echo $resultado[$item_camp]; ?> </p>
-    <!-- <p> <?php /* echo $resultado['ubicacion'] */ ?></p> -->
-    <!-- seguro hay que poner el estado tmb -->
+    <div class="search-select" onclick="setSearch('<?php echo $resultado[$item_camp]; ?>')">
+      <span><?php echo $resultado[$item_camp]; ?> </span>
+      <span> ubicacion <?php /* echo $resultado['ubicacion'] */ ?></span>
+      <span> estado <?php /* echo $resultado['estado'] */ ?></span>
+    </div>
 <?php
   }
 } else {

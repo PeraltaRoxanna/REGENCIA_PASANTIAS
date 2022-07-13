@@ -39,7 +39,7 @@
       <h1>Base de datos</h1>
     </article>
   </section>
-  <form method="post" action="" style="display: block;">
+  <form method="post" action="" style="display: block;" class="main">
     <h2>Registro de movimientos</h2>
     <div style="overflow: auto; height:100%;">
       <table class="table-fixed">
