@@ -137,7 +137,12 @@ h2 {
 	display: flex;
 	justify-content: space-between;
 }
+/* Opciones de accion */
 .send {
 	align-self: end;
 	right: 0;
+}
+[id^="btn"]:checked + label {
+	background-color: rgb(13, 110, 253);
+	color: white;
 }

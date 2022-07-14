@@ -10,17 +10,18 @@ const dev = document.querySelector(".dev");
 const ret = document.querySelector(".ret");
 const mod = document.querySelector(".mod");
 const fo = document.querySelector(".main");
-/* const enviar = document.querySelector(".enviar"); */
+const enviar = document.querySelector(".send");
 
+/* cambiar pro el cheked del input */
 dev.addEventListener("click", () => {
   fo.action = "devolver.php";
+  enviar.removeAttribute("disabled");
 });
 ret.addEventListener("click", () => {
   fo.action = "sacar.php";
+  enviar.removeAttribute("disabled");
 });
 mod.addEventListener("click", () => {
   fo.action = "mover.php";
+  enviar.removeAttribute("disabled");
 });
-/* enviar.addEventListener("click",()=>{
-  fo.submit();
-}); */
