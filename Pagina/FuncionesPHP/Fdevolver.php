@@ -3,7 +3,7 @@ $devolver = false;
 $db = include("conexion.php");
 $fecha = include("fecha.php");
 /* depende de lo que encuentre el buscador */
-$item = strtolower($_POST['item']);
+$item = strtolower($_POST['buscado']);
 /* la ubicacion tiene que saverla el cliente, no yo.
 AUNQUE si para el historial o podria hacer una relacion.
 Tecnicamente NO hacer la relacion es meter datos al pedo*/

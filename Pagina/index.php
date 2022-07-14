@@ -32,7 +32,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="crear.php">Crear</a>
-        </li>
+          <!--  </li>
         <li class="nav-item">
           <a class="nav-link" href="devolver.php">Devolver</a>
         </li>
@@ -41,7 +41,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="mover.php">Mover</a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="registro.php">Registro</a>
         </li>

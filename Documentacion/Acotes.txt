@@ -14,3 +14,19 @@ tips: siempre hacer la aplicacion AB (aprueba de boludos)o sea que el usuario no
 al retirar un item yo solo tengo que retirar y cambiar el estado a prestado. Si lo van a devolver o no, no me interesa
 
 cuando busco un item segun su nombre (y quizas ubicacion) aparecera: nombre-ubicacion-estado
+
+DUDAS:
+1. cuando busco en el buscador, me aparece quien hizo la accion?(nombre). Si no, entonces solo vemos el nombre en el registro?
+2. si modifico la ubicacion necesito nombre?. O mejor primero. Todas las acciones llevan nombre?
+
+
+Idea: buscador con los resultados y abajo las secciones, cuando voy a las secciones en el espacio de resultados aparece
+la info necesaria tipo nombre (creo que nada mas). Y para buscar de nuevo tengo que escribir en el buscador
+
+NO. Mejor que se alarge el espacio de resultados, que tenga un hr y abajo los input nuevos. Se me ocurre que voy a tener
+que practicar como hacer una grid con un flow y probar si puedo hacer un span(si no tengo rows definidas)
+
+NO. Me imagino el buscador y un espacio para para poner nombre, abajo las 2 opciones y abajo como una subseccion con lugar
+y abajo la opcion de modificar
+
+En el buscador tiene que aparecer el ultimo movimiento del item que busco
