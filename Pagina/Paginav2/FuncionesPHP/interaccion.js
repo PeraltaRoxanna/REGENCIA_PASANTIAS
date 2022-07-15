@@ -2,7 +2,7 @@
 const searcher = document.querySelector("#rta");
 
 function setSearch(txt_php) {
-  searcher.value = txt_php;
+	searcher.value = txt_php;
 }
 
 /* Selecionar las opciones de acción y agregar al form el action correspondiente */
@@ -14,14 +14,14 @@ const enviar = document.querySelector(".send");
 
 /* cambiar pro el cheked del input */
 dev.addEventListener("click", () => {
-  fo.action = "devolver.php";
-  enviar.removeAttribute("disabled");
+	fo.action = "devolver.php";
+	enviar.removeAttribute("disabled");
 });
 ret.addEventListener("click", () => {
-  fo.action = "sacar.php";
-  enviar.removeAttribute("disabled");
+	fo.action = "sacar.php";
+	enviar.removeAttribute("disabled");
 });
 mod.addEventListener("click", () => {
-  fo.action = "mover.php";
-  enviar.removeAttribute("disabled");
+	fo.action = "mover.php";
+	enviar.removeAttribute("disabled");
 });

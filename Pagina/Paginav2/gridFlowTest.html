@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div {
+      min-height: 50vh;
+      max-width: 500px;
+      background-color: steelblue;
+      border: thin solid black;
+      margin: auto;
+      display: grid;
+      grid-auto-rows: 100px;
+    }
+
+    .g2 {
+      grid-row: span 2;
+    }
+
+    .flex {
+      display: flex;
+      border: thin solid black;
+      height: 40vh;
+      justify-content: space-between;
+      width: 100%;
+      align-content: center;
+    }
+
+    .flex>* {
+      border: thin solid black;
+    }
+
+    .flex input {
+      justify-self: flex-start;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="div">
+    <div class="">row 1</div>
+    <div class="g2">row 2ffffffffffffffffffffffffffff</div>
+    <div class="">row 3</div>
+    <div class="">row 4</div>
+    <div class="">row 5</div>
+    <div class="">row 6</div>
+    <div class="">row 7</div>
+    <div class="">row 8</div>
+    <div class="">row 9</div>
+    <div class="">row 10</div>
+  </div>
+  <div style="display: grid;">
+    <ul>
+      <li> li num 1</li>
+      <li> li num 2</li>
+      <li> li num 3</li>
+      <li> li num 4</li>
+      <li class="right"> li num 5</li>
+    </ul>
+  </div>
+  <div class="flex">
+    <div class="">div 1|</div>
+    <input type="text" value="input 2">
+    <div class="">div 1[2]</div>
+    <div class="">div 2[2]</div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
