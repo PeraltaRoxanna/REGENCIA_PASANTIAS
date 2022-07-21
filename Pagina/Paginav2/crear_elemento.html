@@ -11,8 +11,85 @@
 </head>
 
 <body>
-
-
+  <div class="alert-conteiner">
+    <div class="alert" tabindex="-1">
+      <p class="alert-txt">La operacion se ha realizado correctamente (test)</p>
+      <input type="button" value="Aceptar" class="btn btn-primary">
+    </div>
+    <div class="alert-bg"></div>
+  </div>
+  <!-- Nav -->
+  <section class="nav-conteiner">
+    <nav class="nav-btn">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Buscar Elemento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="crear_elemento.html">Crear Elemento</a>
+      </ul>
+    </nav>
+    <article class="nav-title">
+      <h1>Base de datos</h1>
+    </article>
+  </section>
+  <form class="main" method="POST">
+    <h2>Crear Elemento</h2>
+    <!-- Input item -->
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" id="basic-addon1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+      </span>
+      <input name="buscado" id="rta" type="text" class="form-control" placeholder="Item ha crear" aria-label="Username"
+        required aria-describedby="basic-addon1" title="nada de carácteres raros"
+        pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
+    </div>
+    <!-- Input persona -->
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" id="basic-addon1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-person-check-fill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+          <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+        </svg>
+      </span>
+      <input name="buscado" id="rta" type="text" class="form-control" placeholder="Persona" aria-label="Username"
+        required aria-describedby="basic-addon1" title="nada de carácteres raros"
+        pattern="^[0-9A-Za-záéíóúÁÉÍÓÚÑñ/s,._,-]+$">
+    </div>
+    <!-- Selects -->
+    <div class="row g-2">
+      <div class="col-md">
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelectGrid" required>
+            <option selected disabled></option>
+            <!-- <?php include("FuncionesPHP/estantes.php"); ?> -->
+          </select>
+          <label for="floatingSelectGrid">Armario</label>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelectGrid" required>
+            <option selected disabled></option>
+            <!-- <?php include("FuncionesPHP/estantes.php"); ?> -->
+          </select>
+          <label for="floatingSelectGrid">Estante</label>
+        </div>
+      </div>
+    </div>
+    <!-- Submit -->
+    <div class="nav-btn lastGrid">
+      <div class="nav nav-pills">
+        <input type="submit" class="nav-link btn" value="Enviar">
+      </div>
+    </div>
+  </form>
 
 
 

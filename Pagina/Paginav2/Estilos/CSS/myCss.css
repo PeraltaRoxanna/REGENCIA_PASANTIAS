@@ -23,8 +23,8 @@ body {
 }
 .nav-btn {
 	display: flex;
-	align-items: flex-end;
-	justify-content: flex-start;
+	align-items: center;
+	justify-content: space-between;
 }
 .nav-title {
 	display: flex;
@@ -142,5 +142,15 @@ h2 {
 	background-color: rgb(13, 110, 253);
 	color: white;
 }
-.send {
+.btn {
+	background-color: rgb(13, 110, 253) !important;
+	color: white;
+	width: 100px;
+	border-radius: 4.5px;
+	text-align: center;
+}
+.lastGrid {
+	grid-row: 6 / 7;
+	align-self: flex-end;
+	justify-self: flex-end;
 }
